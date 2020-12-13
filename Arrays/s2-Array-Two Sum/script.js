@@ -6,6 +6,9 @@ function findTwoSum(nums, target) {
   console.log("target", target);
   const numsMap = {};
   for (let p = 0; p < nums.length; p++) {
+    //set numsMap - key
+    //first iteration - currentMapVal=numsMap[1]
+    //currentMapVal is  the key of the numsMap object
     const currentMapVal = numsMap[nums[p]]; //set numsMap with array value
     //if check - return undefined if key is not present in currentMapVal
     if (currentMapVal >= 0) {
@@ -15,6 +18,7 @@ function findTwoSum(nums, target) {
       const numberToFind = target - nums[p];
       numsMap[numberToFind] = p;
       /*
+      //set numsMap -  value
       //set numsMap object to numberToFind val and array index
       numsMap={numberToFind:array index }
       {
