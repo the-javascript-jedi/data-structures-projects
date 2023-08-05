@@ -1,3 +1,4 @@
+// to run // jest anagrams/test.js --watch
 // --- Directions
 // Given a string, return the character that is most
 // commonly used in the string.
