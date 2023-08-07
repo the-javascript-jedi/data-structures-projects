@@ -9,15 +9,32 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-//First Solution
+// //First Solution
+// function capitalize(str) {
+//   const words = [];
+//   for (let word of str.split(" ")) {
+//     // from index 1 to last val return unchanged
+//     words.push(word[0].toUpperCase() + word.slice(1));
+//   }
+//   // join the words
+//   return words.join(" ");
+// }
+
+// module.exports = capitalize;
+///////////////////////////////////////////////////////////
+// Second Solution
 function capitalize(str) {
-  const words = [];
-  for (let word of str.split(" ")) {
-    // from index 1 to last val return unchanged
-    words.push(word[0].toUpperCase() + word.slice(1));
+  // capitalize first character in string
+  let result = str[0].toUpperCase();
+
+  for (let i = 1; i < str.length; i++) {
+    if (str[i - 1] === " ") {
+      result += str[i].toUpperCase();
+    } else {
+      result += str[i];
+    }
   }
-  // join the words
-  return words.join(" ");
+  return result;
 }
 
 module.exports = capitalize;
